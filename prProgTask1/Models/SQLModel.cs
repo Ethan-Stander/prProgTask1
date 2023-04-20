@@ -18,5 +18,28 @@ namespace prProgTask1.Models
                 cmd.ExecuteNonQuery();
                 }
             }
+
+
+        public static void InsertWords(List<string> words,string Lang)
+        {
+
+
+            using(SqlConnection connection=new SqlConnection(STRCon))
+            {
+                connection.Open();
+                string sql = "INSERT INTO Words(Word,Lang) VALUES(@Word, @lang)";
+
+                SqlCommand cmd = new SqlCommand(sql,connection);
+
+                foreach(string word in words)
+                {
+
+
+                }
+
+            }
+
+        }
+
     }
 }

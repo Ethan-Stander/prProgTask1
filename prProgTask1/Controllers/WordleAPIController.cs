@@ -18,7 +18,7 @@ namespace prProgTask1.Controllers
             APIModel.LoadUsers();
             }
         [HttpGet("GetWords")]
-        public Task<List<string>> GetWord(string word)
+        public Task<List<string>> StoreWords(string word)
         {
             return APIModel.GetWords(word);
         }     
